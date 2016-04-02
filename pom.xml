@@ -10,6 +10,8 @@
 	<properties>
 		<junit.version>4.12</junit.version>
 		<spring.version>4.2.1.RELEASE</spring.version>
+		<hibernate.version>5.1.0.Final</hibernate.version>
+
 	</properties>
 	<developers>
 		<developer>
@@ -62,8 +64,8 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
-<!-- mybatis 包 -->
+
+		<!-- mybatis 包 -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
@@ -77,6 +79,37 @@
 			<version>1.2.2</version>
 		</dependency>
 
+		<!-- Adding Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- Only needed when using JPA instead of "pure Hibernate" -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<!-- required for getting spring working with Hibernate -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>4.2.5.RELEASE</version>
+		</dependency>
+
 		<!-- mysql连接 -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -84,7 +117,7 @@
 			<version>5.1.34</version>
 		</dependency>
 
-  	
+
 		<dependency>
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
@@ -102,6 +135,8 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
+
+
 	</dependencies>
 
 	<build>

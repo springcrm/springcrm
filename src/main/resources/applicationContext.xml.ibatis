@@ -36,20 +36,17 @@
           <property name="minEvictableIdleTimeMillis" value="3600000"/> 
     </bean>
     
-<!--     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
         <property name="dataSource" ref="dataSource" />  
         <property name="configLocation" value="classpath:sqlMapConfig.xml"></property>  
         <property name="mapperLocations" value="classpath:mapper/**/*Mapper.xml"></property>  
     </bean>  
     
-    配置SQLSession模板  
+    <!-- 配置SQLSession模板 -->  
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">  
         <constructor-arg index="0" ref="sqlSessionFactory" />  
-    </bean>  --> 
-    <!-- 配置hibernate5的SessionFactory -->
-	<bean name = "localSessionFactoryBean" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
-		<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
-	</bean>
+    </bean>  
+    
     <!-- 使用JDBC事物 -->  
     <bean id="transactionManager"  
         class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
