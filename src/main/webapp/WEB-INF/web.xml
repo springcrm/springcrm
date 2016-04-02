@@ -50,6 +50,10 @@
         <servlet-name>spring4mvc</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>spring4mvc</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
     	<!-- 配置session超时时间，单位分钟 -->
 	<session-config>
 		<session-timeout>30</session-timeout>
